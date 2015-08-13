@@ -6,12 +6,12 @@
   <body>
     <form method="post" action="/" >
 
-      <%- include('partical/_header', {data:data}) %>
-      <%- include('partical/_fill', {data:data}) %>
-      <%- include('partical/_choice', {data:data}) %>
-      <%- include('partical/_multi-choice', {data:data}) %>
-      <%- include('partical/_true-false', {data:data}) %>
-      <%- include('partical/_short-answer', {data:data}) %>
+      <%- include('partical/_header') %>
+      <%- include('partical/_fill', {topics:getFillTopics()}) %>
+      <%- include('partical/_choice', {topics:getChoiceTopics()}) %>
+      <%- include('partical/_multi-choice', {topics:getMultiChoiceTopics()}) %>
+      <%- include('partical/_true-false', {topics:getTrueFalseTopics()}) %>
+      <%- include('partical/_short-answer', {topics:getShortAnswerTopics()}) %>
 
     </form>
   </body>

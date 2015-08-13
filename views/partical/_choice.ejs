@@ -2,20 +2,15 @@
   <section >
     <h4>二&nbsp选择题(每题5分 共10分)</h4>
   </section>
-  <section >
+  <section>
+    <% topics.forEach(function(topic,i){%>
     <section>
-      &nbsp&nbsp<label >1.UML 与软件工程的关系是:</label>
-      &nbsp&nbsp&nbsp&nbsp<label ><input name="choice1" type="radio"  value="A" >(A)&nbspUML 就是软件工程</label>
-      &nbsp&nbsp&nbsp&nbsp<label ><input name="choice1" type="radio"  value="B" >(B)&nbspUML 参与到软件工程中软件开发过程的几个阶段</label>
-      &nbsp&nbsp&nbsp&nbsp<label ><input name="choice1" type="radio"  value="C">(C)&nbspUML 与软件工程无关</label>
-      &nbsp&nbsp&nbsp&nbsp<label ><input name="choice1" type="radio"  value="D">(D)&nbspUML 是软件工程的一部分</label>
+      <label ><%= i+1%>.<%= topic.question%></label>
+      <% for(var index in topic.options) {%>
+          <label ><input name=<%= topic.name%> type="radio"  value=<%= index%> <% if(topic.input === index){%>checked="checked"<%}%> >
+          <%= topic.options[index]%></label>
+      <%}%>
     </section>
-    <section>
-      &nbsp&nbsp<label class="col-md-12">2.Java 语言支持:</label>
-      &nbsp&nbsp&nbsp&nbsp<label ><input name="choice2" type="radio"  value="A">(A)&nbsp单继承</label>
-      &nbsp&nbsp&nbsp&nbsp<label ><input name="choice2" type="radio"  value="B">(B)&nbsp多继承</label>
-      &nbsp&nbsp&nbsp&nbsp<label ><input name="choice2" type="radio"  value="C">(C)&nbsp单继承和多继承都支持</label>
-      &nbsp&nbsp&nbsp&nbsp<label ><input name="choice2" type="radio"  value="D">(D)&nbsp单继承和多继承都不支持</label>
-    </section>
+    <% }) %>
   </section>
 </section>
