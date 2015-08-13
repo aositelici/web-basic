@@ -5,6 +5,17 @@
     <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      'use strict'
+      $(document).ready(function() {
+        $("#myButton").on("click",function(e){
+          if ($("#name").val().length === 0 || $("#class").val().length === 0 ||$("#number").val().length === 0) {
+            $('#myModal').modal('show');
+            e.preventDefault();
+          }
+        })
+      })
+    </script>
   </head>
   <body>
     <div class="container">
@@ -16,8 +27,9 @@
         <%- include('partical/_multi-choice', {topics:getMultiChoiceTopics()}) %>
         <%- include('partical/_true-false', {topics:getTrueFalseTopics()}) %>
         <%- include('partical/_short-answer', {topics:getShortAnswerTopics()}) %>
-
+        <%- include('partical/_modal') %>
       </form>
     </div>
+
   </body>
 </html>
