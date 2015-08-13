@@ -58,4 +58,31 @@ HomeViewModel.prototype.getShortAnswerTopics= function() {
   return topics;
 }
 
+HomeViewModel.prototype.setUserInput= function() {
+
+  var _this = this;
+  _this.topics.forEach(function(topic) {
+
+    var userInput =_this.inputs[topic.name];
+
+    if(!(userInput instanceof Array)) {
+      userInput = [userInput];
+    }
+    topic.setInput(userInput);
+  })
+
+
+}
+HomeViewModel.prototype.getScores= function() {
+  if (!this.inputs) {
+    return '';
+  }
+  else{
+    this.topics.forEach(function(topic) {
+
+
+    })
+  }
+
+}
 module.exports = HomeViewModel;

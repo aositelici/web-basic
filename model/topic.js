@@ -9,7 +9,7 @@ function Topic (name, question, options, answer, score) {
 
 }
 
-Topic.prototype.setValue = function(input) {
+Topic.prototype.setInput = function(input) {
   this.input = input;
 }
 

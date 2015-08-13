@@ -7,7 +7,7 @@
     <section>
       <label ><%= i+1%>.<%= topic.question%></label>
       <% for(var index in topic.options) {%>
-          <label ><input name=<%= topic.name%> type="radio"  value=<%= index%> <% if(topic.input === index){%>checked="checked"<%}%> >
+          <label ><input name=<%= topic.name%> type="radio"  value=<%= index%> <% if(topic.input.indexOf(index)!== -1){%>checked="checked"<%}%> >
           <%= topic.options[index]%></label>
       <%}%>
     </section>

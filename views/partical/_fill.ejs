@@ -6,7 +6,7 @@
     <% topics.forEach(function(topic,i){%>
       <label><%= i+1%>.<%= topic.question%></label>
       <% for(var k =0; k < topic.answer.length; k++) {%>
-        <input type = "text" name = <%= topic.name %> value=<%= topic.input %>>
+        <input type = "text" name = <%= topic.name %> value=<%= topic.input[k] %>>
       <%}%>
     <%})%>
   </section>

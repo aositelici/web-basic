@@ -13,7 +13,7 @@
         <% if(index==="no"){%>
         <span >X</span>
         <%}%>
-        <input name=<%= topic.name%> type="radio"  value=<%= index%> <% if(topic.input === index){%>checked="checked"<%}%> >
+        <input name=<%= topic.name%> type="radio"  value=<%= index%> <% if(topic.input.indexOf(index)!== -1){%>checked="checked"<%}%> >
       <%}%>
     </section>
     <% }) %>

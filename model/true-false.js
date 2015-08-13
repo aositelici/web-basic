@@ -8,6 +8,9 @@ function TrueFalse(name, question, options, answer, score) {
 TrueFalse.prototype = Object.create(Topic.prototype);
 TrueFalse.prototype.constructor = TrueFalse;
 
+TrueFalse.prototype.setInput = function (input) {
+  this.input = input;
+};
 TrueFalse.prototype.mark = function() {
 
 }
