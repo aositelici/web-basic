@@ -1,0 +1,112 @@
+{
+  "title": [
+    "统一建模语言理论测试"
+  ],
+  "information": {
+    "subject": "考试科目：统一建模语言UML",
+    "time": "时间:100分"
+  },
+  "topics": {
+    "fill_in_blanks":{
+      "type":"fill_in_blanks",
+      "name": "fill1",
+      "question": "UML的中文全称是:",
+      "options": [" "],
+      "answer": ["统一建模语言"],
+      "score": 5
+      },
+    "fill_in_blanks":{
+      "type":"fill_in_blanks",
+      "name": "fill2",
+      "question": "对象最突出的特征是:",
+      "options": [" "," "," "],
+      "answer":  ["封装性", "继承性", "多态性"],
+      "score": 5
+    },
+
+    "single_choose": {
+      "type":"single_choose",
+      "name":"choice1",
+      "question": "UML与软件工程的关系是:",
+      "options": {
+        "A": "(A)UML就是软件工程",
+        "B": "(B)UML参与到软件工程中软件开发过UML",
+        "C": "(C)UML与软件工程无关",
+        "D": "(D)UML是软件工程的一部分"
+        },
+      "answer": ["B"],
+      "score": 5
+      },
+    "single_choose": {
+      "question": "Java 语言支持:",
+      "name":"choice2",
+      "options": {
+        "A": "(A)单继承",
+        "B": "(B)多继承",
+        "C": "(C)单继承和多继承都支持",
+        "D": "(D)继承和多继承都不支持"
+         },
+      "answer": ["A"],
+      "score": 5
+      },
+    "multi_choose": {
+      "type":"multi_choose",
+      "question": "用例的粒度分为以下哪三种。",
+      "name":"multi_choice1",
+      "choices": {
+        "A": "(A)概述级",
+        "B": "(B)需求级",
+        "C": "(C)用户目标级",
+        "D": "(D)子功能级"
+        },
+      "answer": ["A","B","D"],
+      "score": 10
+      },
+    "multi_choose": {
+      "type":"multi_choose",
+      "question": "类图由以下哪三部分组成。",
+      "name":"multi_choice2",
+      "choices": {
+        "A": "(A)名称(Name) ",
+        "B": "(B)属性(Attribute)",
+        "C": "(C)操作(Operation)",
+        "D": "(D)方法(Function)"
+      },
+      "answer":["A","B","C"],
+      "score": 10
+     },
+    "judge": {
+      "type": "judge",
+      "question": "用例图只是用于和客户交流和沟通的,用于确定需求。",
+      "name": "judge1",
+      "options": {
+        "yes": "V",
+        "no": "X"
+      },
+      "answer": "X",
+      "score": 10
+     },
+
+    "judge":{
+      "type": "judge",
+      "question": "在状态图中,终止状态在一个状态图中允许有任意多个。",
+      "name":"judge2",
+      "options": {
+        "yes": "V",
+        "no": "X"
+      },
+       "answer": "V",
+       "score": 10
+      },
+
+    "shortAnswer": {
+      "type": "shortAnswer",
+      "question": "简述什么是模型以及模型的表现形式?",
+      "name":"shortAnswer",
+      "options":"",
+      "answer": ["模型是对现实世界的简化和抽象,模型是对所研究的系统、过程、事物或概念的一种表达形式。"],
+      "score": 30
+     }
+  }
+}
+
