@@ -1,16 +1,21 @@
 <h1>统一建模语言理论测试</h1>
-<section>
+<section >
   <section>
-    <input type="submit" value="提交">
+    <input class="btn btn-primary" type="submit" value="提交">
   </section>
+  <section class="panel panel-default">
+  <section class="panel-body">
+    <section>
+      <label class="col-md-4">考试科目:统一建模语言UML</label>
+      <label class="col-md-4">时间:100分钟</label>
+      <label class="col-md-4">得分：<input type = "text" name= "score" value=<%= info.score%>></label>
+    </section>
+
   <section>
-    <label>考试科目:统一建模语言UML</label>
-    <label>时间:100分钟</label>
-    <label>得分：<input type = "text" name= "score" value=<%= info.score%>></label>
+    <label class="col-md-4">班级：<input  type = "text" name = "class" value=<%= info.class%>></label>
+    <label class="col-md-4">学号：<input  type = "text" name = "number" value=<%= info.number%>></label>
+    <label class="col-md-4">姓名：<input  type = "text" name = "name" value=<%= info.name%>></label>
   </section>
-  <section>
-    <label>班级：<input  type = "text" name = "class" value=<%= info.class%>></label>
-    <label>学号：<input  type = "text" name = "number" value=<%= info.number%>></label>
-    <label>姓名：<input  type = "text" name = "name" value=<%= info.name%>></label>
+  </section>
   </section>
 </section>

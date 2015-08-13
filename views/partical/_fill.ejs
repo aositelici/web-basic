@@ -1,13 +1,17 @@
-<section>
-  <section>
+<section class="panel panel-default">
+  <section class="panel-heading">
     <h4>一&nbsp填空题（每空5分，共20分）</h4>
   </section>
-  <section>
+  <section class="panel-body">
+
     <% topics.forEach(function(topic,i){%>
+    <section class="form-group col-md-12" >
       <label><%= i+1%>.<%= topic.question%></label>
       <% for(var k =0; k < topic.answer.length; k++) {%>
         <input type = "text" name = <%= topic.name %> value=<%= topic.input[k] %>>
       <%}%>
+    </section>
     <%})%>
+
   </section>
 </section>

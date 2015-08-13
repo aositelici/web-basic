@@ -2,17 +2,22 @@
   <head>
     <meta charset="UTF-8">
     <title>统一建模语言理论测试</title>
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <form method="post" action="/" >
+    <div class="container">
+      <form method="post" action="/" class="form-inline" >
 
-      <%- include('partical/_header',{info:getUserInfo()}) %>
-      <%- include('partical/_fill', {topics:getFillTopics()}) %>
-      <%- include('partical/_choice', {topics:getChoiceTopics()}) %>
-      <%- include('partical/_multi-choice', {topics:getMultiChoiceTopics()}) %>
-      <%- include('partical/_true-false', {topics:getTrueFalseTopics()}) %>
-      <%- include('partical/_short-answer', {topics:getShortAnswerTopics()}) %>
+        <%- include('partical/_header',{info:getUserInfo()}) %>
+        <%- include('partical/_fill', {topics:getFillTopics()}) %>
+        <%- include('partical/_choice', {topics:getChoiceTopics()}) %>
+        <%- include('partical/_multi-choice', {topics:getMultiChoiceTopics()}) %>
+        <%- include('partical/_true-false', {topics:getTrueFalseTopics()}) %>
+        <%- include('partical/_short-answer', {topics:getShortAnswerTopics()}) %>
 
-    </form>
+      </form>
+    </div>
   </body>
 </html>
