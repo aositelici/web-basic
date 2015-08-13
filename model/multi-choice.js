@@ -11,3 +11,4 @@ MultiChoice.prototype.constructor = MultiChoice;
 MultiChoice.prototype.mark = function() {
 
 }
+module.exports = MultiChoice;

@@ -12,3 +12,5 @@ function Topic (name, question, options, answer, score) {
 Topic.prototype.setValue = function(input) {
   this.input = input;
 }
+
+module.exports = Topic;

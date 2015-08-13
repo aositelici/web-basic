@@ -11,3 +11,5 @@ Choice.prototype.constructor = Choice;
 Choice.prototype.mark = function() {
 
 }
+
+module.exports = Choice;

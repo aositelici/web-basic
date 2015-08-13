@@ -11,3 +11,5 @@ ShortAnswer.prototype.constructor = ShortAnswer;
 ShortAnswer.prototype.mark = function() {
 
 }
+
+module.exports = ShortAnswer;

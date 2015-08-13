@@ -11,3 +11,5 @@ Fill.prototype.constructor = Fill;
 Fill.prototype.mark = function() {
 
 }
+
+module.exports = Fill;

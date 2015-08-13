@@ -11,3 +11,5 @@ TrueFalse.prototype.constructor = TrueFalse;
 TrueFalse.prototype.mark = function() {
 
 }
+
+module.exports = TrueFalse;
