@@ -5,115 +5,13 @@
   </head>
   <body>
     <form method="post" action="/" >
-        <h1>统一建模语言理论测试</h1>
-        <section>
-          <section>
-            <input type="submit" value="提交">
-          </section>
-          <section>
-            <label>考试科目:统一建模语言UML</label>
-            <label>时间:100分钟</label>
-            <label>得分：<input type = "text" name= "score"/></label>
-          </section>
-          <section>
-            <label>班级：<input  type = "text" name = "class"/></label>
-            <label>学号：<input  type = "text" name = "number"></label>
-            <label>姓名：<input  type = "text" name = "name"></label>
-          </section>
-        </section>
 
-        <section>
-          <section>
-            <h4>一 填空题（每空5分，共20分）</h4>
-          </section>
-          <section>
-            <label>1.UML 的中文全称是:<input  type = "text" name = "fill1"></label>
-            <label>2. 对象最突出的特征是:</label>
-            <input  type = "text" name = "fill2_1">
-            <input  type = "text" name = "fill2_2">
-            <input  type = "text" name = "fill2_3">
-          </section>
-        </section>
-
-        <section >
-            <section >
-                <h4>二&nbsp选择题(每题5分 共10分)</h4>
-            </section>
-            <section >
-                <section>
-                    &nbsp&nbsp<label >1.UML 与软件工程的关系是:</label>
-                    &nbsp&nbsp&nbsp&nbsp<label ><input name="choice2_1" type="radio"  value="A" >(A)&nbspUML 就是软件工程</label>
-                    &nbsp&nbsp&nbsp&nbsp<label ><input name="choice2_1" type="radio"  value="B" >(B)&nbspUML 参与到软件工程中软件开发过程的几个阶段</label>
-                    &nbsp&nbsp&nbsp&nbsp<label ><input name="choice2_1" type="radio"  value="C">(C)&nbspUML 与软件工程无关</label>
-                    &nbsp&nbsp&nbsp&nbsp<label ><input name="choice2_1" type="radio"  value="D">(D)&nbspUML 是软件工程的一部分</label>
-                </section>
-                <section>
-                    &nbsp&nbsp<label class="col-md-12">2.Java 语言支持:</label>
-                    &nbsp&nbsp&nbsp&nbsp<label ><input name="choice2_2" type="radio"  value="A">(A)&nbsp单继承</label>
-                    &nbsp&nbsp&nbsp&nbsp<label ><input name="choice2_2" type="radio"  value="B">(B)&nbsp多继承</label>
-                    &nbsp&nbsp&nbsp&nbsp<label ><input name="choice2_2" type="radio"  value="C">(C)&nbsp单继承和多继承都支持</label>
-                    &nbsp&nbsp&nbsp&nbsp<label ><input name="choice2_2" type="radio"  value="D">(D)&nbsp单继承和多继承都不支持</label>
-                </section>
-            </section>
-        </section>
-
-        <section class="panel panel-default">
-            <section class="panel-heading">
-                <h4>三&nbsp多选题(每题10分 共20分)</h4>
-            </section>
-            <section class="panel-body">
-              <section>
-                &nbsp&nbsp<label class="col-md-12">1.用户的粒度分为以下哪三种</label>
-                &nbsp&nbsp&nbsp&nbsp<label ><input name="multi_choice1" type="checkbox"  value="A" >(A)&nbsp概述级</label>
-                &nbsp&nbsp&nbsp&nbsp<label ><input name="multi_choice1" type="checkbox"  value="B" >(B)&nbsp需求级</label>
-                &nbsp&nbsp&nbsp&nbsp<label ><input name="multi_choice1" type="checkbox"  value="C" >(C)&nbsp用户目标级</label>
-                &nbsp&nbsp&nbsp&nbsp<label ><input name="multi_choice1" type="checkbox"  value="D" >(D)&nbsp子功能级</label>
-              </section>
-              <section>
-                &nbsp&nbsp<label class="col-md-12">2.类图由以下哪三部分组成</label>
-                &nbsp&nbsp&nbsp&nbsp<label ><input name="multi_choice2" type="checkbox"  value="A" >(A)&nbsp名称(Name)</label>
-                &nbsp&nbsp&nbsp&nbsp<label ><input name="multi_choice2" type="checkbox"  value="B" >(B)&nbsp属性(Attribute)</label>
-                &nbsp&nbsp&nbsp&nbsp<label ><input name="multi_choice2" type="checkbox"  value="C" >(C)&nbsp操作(Operation)</label>
-                &nbsp&nbsp&nbsp&nbsp<label ><input name="multi_choice2" type="checkbox"  value="D" >(D)&nbsp方法(Function)</label>
-            </section>
-          </section>
-        </section>
-
-        <section>
-          <section >
-             <h4>四&nbsp判断题(每题10分 共20分)</h4>
-            </section>
-            <section>
-              <section>
-                <label>&nbsp&nbsp1. 用例图只是用于和客户交流和沟通的,用于确定需求。</label>
-                <span >V</span>
-                <input name="judge1" type="radio" value="V" >
-                <span>X</span>
-                <input name="judge1" type="radio" value="X" >
-              </section>
-              <section>
-                <label>&nbsp&nbsp2. 在状态图中,终止状态在一个状态图中允许有任意多个。</label>
-                <span >V</span>
-                <input name="judge2" type="radio" value="V"/>
-                <span >X</span>
-                <input name="judge2" type="radio" value="X" />
-              </section>
-            </section>
-        </section>
-
-        <section >
-          <section >
-            <h4>五 简答题(每题30分 共30分)</h4>
-          </section>
-          <section >
-            <section>
-              <label>&nbsp&nbsp1. 简述什么是模型以及模型的表现形式?</label>
-            </section>
-            <section>
-              &nbsp&nbsp<textarea class="form-control" rows="4" cols="70" name="shortAnswer1"></textarea>
-            </section>
-          </section>
-        </section>
+      <%- include('partical/_header', {data:data}) %>
+      <%- include('partical/_fill', {data:data}) %>
+      <%- include('partical/_choice', {data:data}) %>
+      <%- include('partical/_multi-choice', {data:data}) %>
+      <%- include('partical/_true-false', {data:data}) %>
+      <%- include('partical/_short-answer', {data:data}) %>
 
     </form>
   </body>
