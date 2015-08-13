@@ -38,8 +38,9 @@
       "score": 5
       },
     "single_choose2": {
-      "question": "Java 语言支持:",
+      "type":"single_choose",
       "name":"choice2",
+      "question": "Java 语言支持:",
       "options": {
         "A": "(A)单继承",
         "B": "(B)多继承",
