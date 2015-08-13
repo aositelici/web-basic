@@ -75,14 +75,38 @@ HomeViewModel.prototype.setUserInput= function() {
 }
 HomeViewModel.prototype.getScores= function() {
   if (!this.inputs) {
+
     return '';
   }
   else{
+
+    var scores = 0;
     this.topics.forEach(function(topic) {
-
-
+      scores += topic.mark();
     })
+
+    return scores;
   }
+}
+
+HomeViewModel.prototype.getUserInfo= function() {
+  if(this.inputs) {
+    return{
+      name: this.inputs.name ,
+      class: this.inputs.class ,
+      number: this.inputs.number ,
+      score: this.getScores()
+    }
+  }
+  else{
+    return {
+      name:'',
+      class:'',
+      number:'',
+      score:''
+    }
+  }
+
 
 }
 module.exports = HomeViewModel;

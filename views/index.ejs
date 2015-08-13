@@ -6,7 +6,7 @@
   <body>
     <form method="post" action="/" >
 
-      <%- include('partical/_header') %>
+      <%- include('partical/_header',{info:getUserInfo()}) %>
       <%- include('partical/_fill', {topics:getFillTopics()}) %>
       <%- include('partical/_choice', {topics:getChoiceTopics()}) %>
       <%- include('partical/_multi-choice', {topics:getMultiChoiceTopics()}) %>

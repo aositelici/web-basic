@@ -6,10 +6,10 @@ function HomeController(req,res) {
   var topicHelper = new TopicHelper();
   var topics = topicHelper.getTopics(data.topics);
   var userInput = req.body;
-  console.log(userInput);
+  //console.log(userInput);
   var homeViewModel = new HomeViewModel(topics,userInput);
   homeViewModel.setUserInput();
-  console.log(homeViewModel.getShortAnswerTopics());
+  //console.log(homeViewModel.getScores());
   res.render('index',homeViewModel);
 
 }

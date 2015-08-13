@@ -1,4 +1,5 @@
 var Topic = require('./topic');
+var _ = require('lodash');
 
 function Fill(name, question, options, answer, score) {
 
@@ -13,7 +14,8 @@ Fill.prototype.setInput = function(input) {
 }
 
 Fill.prototype.mark = function() {
-
+  var score = _.intersection(this.answer,this.input).length*this.score;
+  return score;
 }
 
 module.exports = Fill;

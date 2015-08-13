@@ -13,6 +13,9 @@ TrueFalse.prototype.setInput = function (input) {
 };
 TrueFalse.prototype.mark = function() {
 
-}
+  var score = (this.input.join('') === this.answer.join(''))? this.score : 0;
+  return score;
+  }
+
 
 module.exports = TrueFalse;
