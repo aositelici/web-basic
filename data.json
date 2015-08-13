@@ -7,7 +7,7 @@
     "time": "时间:100分"
   },
   "topics": {
-    "fill_in_blanks":{
+    "fill_in_blanks1":{
       "type":"fill_in_blanks",
       "name": "fill1",
       "question": "UML的中文全称是:",
@@ -15,7 +15,7 @@
       "answer": ["统一建模语言"],
       "score": 5
       },
-    "fill_in_blanks":{
+    "fill_in_blanks2":{
       "type":"fill_in_blanks",
       "name": "fill2",
       "question": "对象最突出的特征是:",
@@ -24,7 +24,7 @@
       "score": 5
     },
 
-    "single_choose": {
+    "single_choose1": {
       "type":"single_choose",
       "name":"choice1",
       "question": "UML与软件工程的关系是:",
@@ -37,7 +37,7 @@
       "answer": ["B"],
       "score": 5
       },
-    "single_choose": {
+    "single_choose2": {
       "question": "Java 语言支持:",
       "name":"choice2",
       "options": {
@@ -49,7 +49,7 @@
       "answer": ["A"],
       "score": 5
       },
-    "multi_choose": {
+    "multi_choose1": {
       "type":"multi_choose",
       "question": "用例的粒度分为以下哪三种。",
       "name":"multi_choice1",
@@ -62,7 +62,7 @@
       "answer": ["A","B","D"],
       "score": 10
       },
-    "multi_choose": {
+    "multi_choose2": {
       "type":"multi_choose",
       "question": "类图由以下哪三部分组成。",
       "name":"multi_choice2",
@@ -75,7 +75,7 @@
       "answer":["A","B","C"],
       "score": 10
      },
-    "judge": {
+    "judge1": {
       "type": "judge",
       "question": "用例图只是用于和客户交流和沟通的,用于确定需求。",
       "name": "judge1",
@@ -87,7 +87,7 @@
       "score": 10
      },
 
-    "judge":{
+    "judge2":{
       "type": "judge",
       "question": "在状态图中,终止状态在一个状态图中允许有任意多个。",
       "name":"judge2",
@@ -99,7 +99,7 @@
        "score": 10
       },
 
-    "shortAnswer": {
+    "shortAnswer1": {
       "type": "shortAnswer",
       "question": "简述什么是模型以及模型的表现形式?",
       "name":"shortAnswer",
