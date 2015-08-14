@@ -8,9 +8,6 @@ function ShortAnswer(name, question, options, answer, score) {
 ShortAnswer.prototype = Object.create(Topic.prototype);
 ShortAnswer.prototype.constructor = ShortAnswer;
 
-ShortAnswer.prototype.setInput = function (input) {
-  this.input = input;
-}
 
 ShortAnswer.prototype.mark = function () {
   var score = (this.input.join('') === this.answer.join('')) ? this.score : 0;

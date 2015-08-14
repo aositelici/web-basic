@@ -8,9 +8,6 @@ function MultiChoice(name, question, options, answer, score) {
 MultiChoice.prototype = Object.create(Topic.prototype);
 MultiChoice.prototype.constructor = MultiChoice;
 
-MultiChoice.prototype.setInput = function (input) {
-  this.input = input;
-};
 MultiChoice.prototype.mark = function () {
   var score = (this.input.join('') === this.answer.join('')) ? this.score : 0;
   return score;

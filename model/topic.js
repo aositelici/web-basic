@@ -10,7 +10,12 @@ function Topic(name, question, options, answer, score) {
 }
 
 Topic.prototype.setInput = function (input) {
-  this.input = input;
-}
+
+  this.input = (input instanceof Array) ? input : [input];
+};
+
+Topic.prototype.mark = function () {
+
+};
 
 module.exports = Topic;
