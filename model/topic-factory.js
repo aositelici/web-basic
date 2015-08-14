@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var Fill = require('./fill');
 var Choice = require('./choice');

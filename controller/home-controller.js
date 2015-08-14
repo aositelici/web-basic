@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var HomeViewModel = require('../view-models/home-view-model');
 var TopicHelper = require('../helper/topic-helper');
@@ -17,7 +17,7 @@ HomeController.prototype.setExamineeInputs = function (topics, inputs) {
     var examineeInput = inputs[topic.name];
 
     topic.setInput(examineeInput);
-  })
+  });
 };
 
 HomeController.prototype.index = function (req, res) {
@@ -37,7 +37,7 @@ HomeController.prototype.submit = function (req, res) {
 
   var homeViewModel = new HomeViewModel(topics, userInputs);
   homeViewModel.setUserInput();
-  //this.setExamineeInputs(topics,userInputs);
+ // this.setExamineeInputs(topics,userInputs);
   var marker = new MarkerHelper();
   homeViewModel.totalScore = marker.getTotalScore(userInputs, topics);
 
@@ -48,7 +48,7 @@ HomeController.prototype.submit = function (req, res) {
   homeViewModel.Number = info.number;
 
   if (homeViewModel.Name.length === 0 || homeViewModel.Number.length === 0 || homeViewModel.Class.length === 0) {
-    alert('请检查姓名 学号 班级是否输入完整');
+    console.log('请检查姓名 学号 班级是否输入完整');
   }
   else {
     res.render('index', homeViewModel);
@@ -60,10 +60,11 @@ HomeController.prototype.submit = function (req, res) {
 HomeController.prototype.validate = function(homeViewModel) {
 
   if (homeViewModel.Name.length === 0 || homeViewModel.Number.length === 0 || homeViewModel.Class.length === 0) {
-    alert('请检查姓名 学号 班级是否输入完整');
+    console.log('请检查姓名 学号 班级是否输入完整');
   }
   else {
     res.render('index', homeViewModel);
   }
-}
+};
+
 module.exports = HomeController;

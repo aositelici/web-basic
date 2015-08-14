@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var TopicHelper = require('../helper/topic-helper');
 var Fill = require('../model/fill');

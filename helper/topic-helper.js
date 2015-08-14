@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var TopicFactory = require('../model/topic-factory');
 
