@@ -1,6 +1,6 @@
 <%- include('partical/_head') %>
 <div class="container">
-  <form method="post" action="/" class="form-inline">
+  <form method="post" action="/" class="form-inline" autocomplete="off">
 
     <%- include('partical/_header',{Name:Name, Number:Number, Class:Class, score:totalScore}) %>
     <%- include('partical/_fill', {topics:getFillTopics()}) %>
@@ -9,6 +9,9 @@
     <%- include('partical/_true-false', {topics:getTrueFalseTopics()}) %>
     <%- include('partical/_short-answer', {topics:getShortAnswerTopics()}) %>
     <%- include('partical/_modal') %>
+    <section>
+      <input class="btn btn-primary btn-block btn-lg" type="submit" id="myButton" value="提交">
+    </section>
   </form>
 </div>
 <%- include('partical/_foot') %>
