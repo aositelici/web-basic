@@ -3,13 +3,16 @@
     <h4>二&nbsp选择题(每题5分 共10分)</h4>
   </section>
   <section class="panel-body">
-    <% topics.forEach(function(topic,i){%>
+    <% topics.forEach(function(topic, i){ %>
     <section>
-      <label ><%= i+1%>.<%= topic.question%></label>
-      <% for(var index in topic.options) {%>
-          <label class="col-md-12"><input name=<%= topic.name%> type="radio"  value=<%= index%> <% if(topic.input.indexOf(index)!== -1){%>checked="checked"<%}%> >
-          <%= topic.options[index]%></label>
-      <%}%>
+      <label><%= i + 1 %>.<%= topic.question %></label>
+      <% for(var index in topic.options) { %>
+      <label class="col-md-12"><input name=<%= topic.name %> type="radio"
+                                      value=<%= index %> <% if(topic.input.indexOf(index) !== -1){ %>checked="checked"
+          <% } %>
+          >
+        <%= topic.options[index] %></label>
+      <% } %>
     </section>
     <% }) %>
   </section>

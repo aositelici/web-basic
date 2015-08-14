@@ -11,11 +11,11 @@ app.set('view engine', 'ejs');
 app.locals.data = require('./data.json');
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/bower_components',express.static(path.join(__dirname, '/bower_components')));
+app.use(bodyParser.urlencoded({extended: true}));
+app.use('/bower_components', express.static(path.join(__dirname, '/bower_components')));
 app.use('/', routes);
 
-app.listen(3000,function() {
-    console.log('listening 3000');
+app.listen(3000, function () {
+  console.log('listening 3000');
 })
 module.exports = app;

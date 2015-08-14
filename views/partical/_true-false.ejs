@@ -1,20 +1,23 @@
 <section class="panel panel-default">
-  <section class="panel-heading" >
+  <section class="panel-heading">
     <h4>四&nbsp判断题(每题10分 共20分)</h4>
   </section>
   <section class="panel-body">
-    <% topics.forEach(function(topic,i){%>
+    <% topics.forEach(function(topic, i){ %>
     <section>
-      <label ><%= i+1%>.<%= topic.question%></label>
-      <% for(var index in topic.options) {%>
-        <% if(index==="V"){%>
+      <label><%= i + 1 %>.<%= topic.question %></label>
+      <% for(var index in topic.options) { %>
+      <% if(index === "V"){ %>
       <span class="glyphicon glyphicon-ok"></span>
-        <%}%>
-        <% if(index==="X"){%>
+      <% } %>
+      <% if(index === "X"){ %>
       <span class="glyphicon glyphicon-remove"></span>
-        <%}%>
-        <input name=<%= topic.name%> type="radio"  value=<%= index%> <% if(topic.input.indexOf(index)!== -1){%>checked="checked"<%}%> >
-      <%}%>
+      <% } %>
+      <input name=<%= topic.name %> type="radio"
+             value=<%= index %> <% if(topic.input.indexOf(index) !== -1){ %>checked="checked"
+        <% } %>
+        >
+      <% } %>
     </section>
     <% }) %>
   </section>

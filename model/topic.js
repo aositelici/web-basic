@@ -1,4 +1,4 @@
-function Topic (name, question, options, answer, score) {
+function Topic(name, question, options, answer, score) {
 
   this.name = name;
   this.question = question;
@@ -9,7 +9,7 @@ function Topic (name, question, options, answer, score) {
 
 }
 
-Topic.prototype.setInput = function(input) {
+Topic.prototype.setInput = function (input) {
   this.input = input;
 }
 

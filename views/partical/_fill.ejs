@@ -4,14 +4,14 @@
   </section>
   <section class="panel-body">
 
-    <% topics.forEach(function(topic,i){%>
-    <section class="form-group col-md-12" >
-      <label><%= i+1%>.<%= topic.question%></label>
-      <% for(var k =0; k < topic.answer.length; k++) {%>
-        <input type = "text" name = <%= topic.name %> value=<%= topic.input[k] %>>
-      <%}%>
+    <% topics.forEach(function(topic, i){ %>
+    <section class="form-group col-md-12">
+      <label><%= i + 1 %>.<%= topic.question %></label>
+      <% for(var k = 0; k < topic.answer.length; k++) { %>
+      <input type="text" name=<%= topic.name %> value=<%= topic.input[k] %>>
+      <% } %>
     </section>
-    <%})%>
+    <% }) %>
 
   </section>
 </section>

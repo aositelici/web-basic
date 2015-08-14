@@ -3,13 +3,16 @@
     <h4>三&nbsp多选题(每题10分 共20分)</h4>
   </section>
   <section class="panel-body">
-    <% topics.forEach(function(topic,i){%>
+    <% topics.forEach(function(topic, i){ %>
     <section>
-      <label ><%= i+1%>.<%= topic.question%></label>
-      <% for(var index in topic.options) {%>
-      <label class="col-md-12"><input name=<%= topic.name%> type="checkbox"  value=<%= index%> <% if(topic.input.indexOf(index) !== -1){%>checked="checked"<%}%> >
-        <%= topic.options[index]%></label>
-      <%}%>
+      <label><%= i + 1 %>.<%= topic.question %></label>
+      <% for(var index in topic.options) { %>
+      <label class="col-md-12"><input name=<%= topic.name %> type="checkbox"
+                                      value=<%= index %> <% if(topic.input.indexOf(index) !== -1){ %>checked="checked"
+          <% } %>
+          >
+        <%= topic.options[index] %></label>
+      <% } %>
     </section>
     <% }) %>
   </section>

@@ -1,15 +1,15 @@
 var TopicFactory = require('../model/topic-factory');
 
-function TopicHelper () {
+function TopicHelper() {
 
 }
 
-TopicHelper.prototype.getTopics = function(questions) {
+TopicHelper.prototype.getTopics = function (questions) {
 
   var topics = [];
   var topicFactory = new TopicFactory();
 
-  for(var type in questions) {
+  for (var type in questions) {
 
     topics.push(topicFactory.getTopic(questions[type]));
   }

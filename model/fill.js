@@ -3,20 +3,20 @@ var _ = require('lodash');
 
 function Fill(name, question, options, answer, score) {
 
-  Topic.call(this,name, question, options, answer, score);
+  Topic.call(this, name, question, options, answer, score);
 
 }
 Fill.prototype = Object.create(Topic.prototype);
 Fill.prototype.constructor = Fill;
 
-Fill.prototype.setInput = function(input) {
+Fill.prototype.setInput = function (input) {
 
   this.input = input;
 
 }
 
-Fill.prototype.mark = function() {
-  var score = _.intersection(this.answer,this.input).length*this.score;
+Fill.prototype.mark = function () {
+  var score = _.intersection(this.answer, this.input).length * this.score;
   return score;
 }
 
