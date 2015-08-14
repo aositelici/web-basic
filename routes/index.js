@@ -4,8 +4,10 @@ var router = express.Router();
 var HomeController = require('../controller/home-controller');
 var GetController = require('../controller/get-controller');
 
-router.get('/', GetController);
+var homeController = new HomeController();
 
-router.post('/', HomeController);
+router.get('/', homeController.index);
+
+router.post('/', homeController.submit);
 
 module.exports = router;
