@@ -21,7 +21,7 @@
 <div class="container">
   <form method="post" action="/" class="form-inline">
 
-    <%- include('partical/_header',{info:getUserInfo()}) %>
+    <%- include('partical/_header',{Name:Name, Number:Number, Class:Class, score:totalScore}) %>
     <%- include('partical/_fill', {topics:getFillTopics()}) %>
     <%- include('partical/_choice', {topics:getChoiceTopics()}) %>
     <%- include('partical/_multi-choice', {topics:getMultiChoiceTopics()}) %>
