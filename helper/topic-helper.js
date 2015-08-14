@@ -1,3 +1,5 @@
+'use strict'
+
 var TopicFactory = require('../model/topic-factory');
 
 function TopicHelper() {

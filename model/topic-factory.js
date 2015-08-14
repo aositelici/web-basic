@@ -1,3 +1,5 @@
+'use strict'
+
 var Fill = require('./fill');
 var Choice = require('./choice');
 var MultiChoice = require('./multi-choice');

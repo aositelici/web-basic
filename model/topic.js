@@ -1,3 +1,5 @@
+'use strict'
+
 function Topic(name, question, options, answer, score) {
 
   this.name = name;

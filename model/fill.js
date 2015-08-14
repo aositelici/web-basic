@@ -1,3 +1,5 @@
+'use strict'
+
 var Topic = require('./topic');
 var _ = require('lodash');
 

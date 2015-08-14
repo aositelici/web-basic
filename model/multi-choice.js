@@ -1,3 +1,5 @@
+'use strict'
+
 var Topic = require('./topic');
 
 function MultiChoice(name, question, options, answer, score) {

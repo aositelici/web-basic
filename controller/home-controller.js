@@ -1,3 +1,5 @@
+'use strict'
+
 var HomeViewModel = require('../view-models/home-view-model');
 var TopicHelper = require('../helper/topic-helper');
 var data = require('../data.json');

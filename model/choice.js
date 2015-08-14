@@ -1,3 +1,4 @@
+'use strict'
 var Topic = require('./topic');
 
 function Choice(name, question, options, answer, score) {

@@ -1,3 +1,5 @@
+'use strict'
+
 var TopicHelper = require('../helper/topic-helper');
 var Fill = require('../model/fill');
 var Choice = require('../model/choice');

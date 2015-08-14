@@ -1,3 +1,5 @@
+'use strict'
+
 var Topic = require('./topic');
 
 function ShortAnswer(name, question, options, answer, score) {
