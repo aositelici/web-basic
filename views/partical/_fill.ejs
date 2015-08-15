@@ -1,7 +1,9 @@
 <section class="panel panel-default">
-  <section class="panel-heading">
-    <h4>一&nbsp填空题（每空5分，共20分）</h4>
-  </section>
+  <%if (topics.length !== 0) { %>
+    <section class="panel-heading">
+      <h4>一&nbsp填空题（每空5分，共20分）</h4>
+    </section>
+  <% } %>
   <section class="panel-body">
 
     <% topics.forEach(function(topic, i){ %>

@@ -1,13 +1,15 @@
 <section class="panel panel-default">
-  <section class="panel-heading">
-    <h4>五 简答题(每题30分 共30分)</h4>
-  </section>
+  <%if (topics.length !== 0) {%>
+    <section class="panel-heading">
+      <h4>五 简答题(每题30分 共30分)</h4>
+    </section>
+  <% } %>
   <section class="panel-body">
     <% topics.forEach(function(topic, i){ %>
     <section>
       <label><%= i + 1 %>.<%= topic.question %></label>
     </section>
-    <section>
+    <section >
       <textarea class="form-control" rows="4" cols="70" name=<%= topic.name %>><%= topic.input %></textarea>
     </section>
     <% }) %>
