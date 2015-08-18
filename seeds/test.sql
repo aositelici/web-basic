@@ -3,6 +3,13 @@ CREATE DATABASE TWWebBasic DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
 
 USE TWWebBasic;
 
+CREATE TABLE options(
+  optionsId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  itemId INT NOT NULL,
+  item VARCHAR(5) NOT NULL ,
+  title VARCHAR(100) NOT NULL
+);
+
 CREATE TABLE topics(
    topicId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
    type VARCHAR(20) NOT NULL,
@@ -11,112 +18,7 @@ CREATE TABLE topics(
    answer VARCHAR(100) NOT NULL,
    score INT NOT NULL
 );
-CREATE TABLE options(
-  optionsId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  itemId INT NOT NULL,
-  item VARCHAR(5) NOT NULL ,
-  title VARCHAR(100) NOT NULL
-);
 
-ALTER TABLE topics ADD CONSTRAINT topic_option FOREIGN KEY (topicId) REFERENCES options(itemId) ON DELETE CASCADE;
-
-INSERT INTO topics(type,name,questions,answer,score)
-VALUES
-(
-   "fill_in_blanks",
-   "fill1",
-   "UML的中文全称是:",
-   "统一建模语言",
-   5
-);
-
-INSERT INTO topics(type,name,questions,answer,score)
-VALUES
-(
-   "fill_in_blanks",
-   "fill2",
-   "对象最突出的特征是:",
-   "封装性 继承性 多态性",
-   5
-);
-
-INSERT INTO topics(type,name,questions,answer,score)
-VALUES
-(
-   "single_choose",
-   "choice1",
-   "UML与软件工程的关系是:",
-   "B",
-   10
-);
-
-INSERT INTO topics(type,name,questions,answer,score)
-VALUES
-(
-   "single_choose",
-   "choice2",
-   "Java 语言支持:",
-   "A",
-   10
-);
-
-INSERT INTO topics(type,name,questions,answer,score)
-VALUES
-(
-   "multi_choose",
-   "multi_choice1",
-   "用例的粒度分为以下哪三种。",
-   "A B D",
-   10
-);
-
-INSERT INTO topics(type,name,questions,answer,score)
-VALUES
-(
-   "multi_choose",
-   "multi_choice2",
-   "类图由以下哪三部分组成。",
-   "A B C",
-   10
-);
-
-INSERT INTO topics(type,name,questions,answer,score)
-VALUES
-(
-   "judge",
-   "judge1",
-   "用例图只是用于和客户交流和沟通的,用于确定需求。",
-   "X",
-   10
-);
-
-INSERT INTO topics(type,name,questions,answer,score)
-VALUES
-(
-   "judge",
-   "judge2",
-   "在状态图中,终止状态在一个状态图中允许有任意多个。",
-   "V",
-   10
-);
-
-INSERT INTO topics(type,name,questions,answer,score)
-VALUES
-(
-   "shortAnswer",
-   "shortAnswer",
-   "简述什么是模型以及模型的表现形式?",
-   "模型是对现实世界的简化和抽象,模型是对所研究的系统、过程、事物或概念的一种表达形式。",
-   10
-);
-
-INSERT INTO options(itemId,item,title)
-VALUES
-(
-   1,
-   "",
-   ""
-);
 
 
 INSERT INTO options(itemId,item,title)
@@ -315,6 +217,102 @@ VALUES
    ""
 );
 
-SELECT * FROM topics LEFT JOIN options ops
-                        ON topics.topicId = ops.itemId;
-SELECT * FROM options;
+
+INSERT INTO topics(type,name,questions,answer,score)
+VALUES(
+   "fill_in_blanks",
+   "fill1",
+   "UML的中文全称是:",
+   "统一建模语言",
+   5
+);
+
+INSERT INTO topics(type,name,questions,answer,score)
+VALUES
+(
+   "fill_in_blanks",
+   "fill2",
+   "对象最突出的特征是:",
+   "封装性 继承性 多态性",
+   5
+);
+
+INSERT INTO topics(type,name,questions,answer,score)
+VALUES
+(
+   "single_choose",
+   "choice1",
+   "UML与软件工程的关系是:",
+   "B",
+   5
+);
+
+INSERT INTO topics(type,name,questions,answer,score)
+VALUES
+(
+   "single_choose",
+   "choice2",
+   "Java 语言支持:",
+   "A",
+   5
+);
+
+INSERT INTO topics(type,name,questions,answer,score)
+VALUES
+(
+   "multi_choose",
+   "multi_choice1",
+   "用例的粒度分为以下哪三种。",
+   "A B D",
+   10
+);
+
+INSERT INTO topics(type,name,questions,answer,score)
+VALUES
+(
+   "multi_choose",
+   "multi_choice2",
+   "类图由以下哪三部分组成。",
+   "A B C",
+   10
+);
+
+INSERT INTO topics(type,name,questions,answer,score)
+VALUES
+(
+   "judge",
+   "judge1",
+   "用例图只是用于和客户交流和沟通的,用于确定需求。",
+   "X",
+   10
+);
+
+INSERT INTO topics(type,name,questions,answer,score)
+VALUES
+(
+   "judge",
+   "judge2",
+   "在状态图中,终止状态在一个状态图中允许有任意多个。",
+   "V",
+   10
+);
+
+INSERT INTO topics(type,name,questions,answer,score)
+VALUES
+(
+   "shortAnswer",
+   "shortAnswer",
+   "简述什么是模型以及模型的表现形式?",
+   "模型是对现实世界的简化和抽象,模型是对所研究的系统、过程、事物或概念的一种表达形式。",
+   10
+);
+
+INSERT INTO options(itemId,item,title)
+VALUES
+(
+   1,
+   "",
+   ""
+);
+
+
