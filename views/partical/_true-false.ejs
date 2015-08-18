@@ -8,18 +8,18 @@
     <% topics.forEach(function(topic, i){ %>
     <section>
       <label><%= i + 1 %>.<%= topic.question %></label>
-      <% for(var index in topic.options) { %>
-      <% if(index === "V"){ %>
+      <% topic.options.forEach(function(option){ %>
+      <% if(option.item === "V"){ %>
       <span class="glyphicon glyphicon-ok text-danger"></span>
       <% } %>
-      <% if(index === "X"){ %>
+      <% if(option.item === "X"){ %>
       <span class="glyphicon glyphicon-remove text-success"></span>
       <% } %>
       <input name=<%= topic.name %> type="radio"
-             value=<%= index %> <% if(topic.input.indexOf(index) !== -1){ %>checked="checked"
+             value=<%= option.item %> <% if(topic.input.indexOf(option.item) !== -1){ %>checked="checked"
         <% } %>
         >
-      <% } %>
+      <% })%>
     </section>
     <% }) %>
   </section>

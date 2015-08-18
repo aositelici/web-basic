@@ -8,13 +8,13 @@
     <% topics.forEach(function(topic, i){ %>
     <section class="clearfix">
       <label><%= i + 1 %>.<%= topic.question %></label>
-      <% for(var index in topic.options) { %>
+      <% topic.options.forEach(function(option){ %>
       <label class="col-md-12"><input name=<%= topic.name %> type="radio"
-                                      value=<%= index %> <% if(topic.input.indexOf(index) !== -1){ %>checked="checked"
+                                      value=<%= option.item %> <% if(topic.input.indexOf(option.item) !== -1){ %>checked="checked"
           <% } %>
           >
-        <%= topic.options[index] %></label>
-      <% } %>
+        <%= option.describe %></label>
+      <% }) %>
     </section>
     <% }) %>
   </section>
