@@ -17,6 +17,6 @@ TopicHelper.prototype.getTopics = function (questions) {
   }
 
   return topics;
-}
+};
 
 module.exports = TopicHelper;

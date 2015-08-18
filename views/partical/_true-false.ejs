@@ -10,10 +10,10 @@
       <label><%= i + 1 %>.<%= topic.question %></label>
       <% for(var index in topic.options) { %>
       <% if(index === "V"){ %>
-      <span class="glyphicon glyphicon-ok"></span>
+      <span class="glyphicon glyphicon-ok text-danger"></span>
       <% } %>
       <% if(index === "X"){ %>
-      <span class="glyphicon glyphicon-remove"></span>
+      <span class="glyphicon glyphicon-remove text-success"></span>
       <% } %>
       <input name=<%= topic.name %> type="radio"
              value=<%= index %> <% if(topic.input.indexOf(index) !== -1){ %>checked="checked"

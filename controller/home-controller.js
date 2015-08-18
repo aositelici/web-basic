@@ -37,7 +37,7 @@ HomeController.prototype.submit = function (req, res) {
 
   var homeViewModel = new HomeViewModel(topics, userInputs);
   homeViewModel.setUserInput();
- // this.setExamineeInputs(topics,userInputs);
+  // this.setExamineeInputs(topics,userInputs);
   var marker = new MarkerHelper();
   homeViewModel.totalScore = marker.getTotalScore(userInputs, topics);
 
