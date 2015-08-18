@@ -5,6 +5,7 @@ var TopicHelper = require('../helper/topic-helper');
 var data = require('../data.json');
 var MarkerHelper = require('../helper/marker-helper');
 var InfoHelper = require('../helper/info-helper');
+var PaperDataHelper = require('../helper/paperData-helper');
 
 function HomeController() {
 
@@ -22,49 +23,48 @@ HomeController.prototype.setExamineeInputs = function (topics, inputs) {
 
 HomeController.prototype.index = function (req, res) {
 
-  var topicHelper = new TopicHelper();
-  var topics = topicHelper.getTopics(data.topics);
-  var homeViewModel = new HomeViewModel(topics);
-  res.render('index', homeViewModel);
+  var paperDataHelper = new PaperDataHelper();
+  paperDataHelper.getPaperData(function(data){
+
+    var topicHelper = new TopicHelper();
+    var topics = topicHelper.getTopics(data);
+    var homeViewModel = new HomeViewModel(topics);
+    res.render('index', homeViewModel);
+
+  });
+
 
 };
 
 HomeController.prototype.submit = function (req, res) {
 
-  var topicHelper = new TopicHelper();
-  var topics = topicHelper.getTopics(data.topics);
-  var userInputs = req.body;
+  var paperDataHelper = new PaperDataHelper();
+  paperDataHelper.getPaperData(function(data) {
 
-  var homeViewModel = new HomeViewModel(topics, userInputs);
-  homeViewModel.setUserInput();
-  // this.setExamineeInputs(topics,userInputs);
-  var marker = new MarkerHelper();
-  homeViewModel.totalScore = marker.getTotalScore(userInputs, topics);
+    var topicHelper = new TopicHelper();
+    var topics = topicHelper.getTopics(data);
+    var userInputs = req.body;
 
-  var infoHelper = new InfoHelper();
-  var info = infoHelper.getUserInfo(userInputs);
-  homeViewModel.Name = info.name;
-  homeViewModel.Class = info.class;
-  homeViewModel.Number = info.number;
+    var homeViewModel = new HomeViewModel(topics, userInputs);
+    homeViewModel.setUserInput();
+    // this.setExamineeInputs(topics,userInputs);
+    var marker = new MarkerHelper();
+    homeViewModel.totalScore = marker.getTotalScore(userInputs, topics);
 
-  if (homeViewModel.Name.length === 0 || homeViewModel.Number.length === 0 || homeViewModel.Class.length === 0) {
-    console.log('请检查姓名 学号 班级是否输入完整');
-  }
-  else {
-    res.render('index', homeViewModel);
-  }
-  //this.validate(homeViewModel);
+    var infoHelper = new InfoHelper();
+    var info = infoHelper.getUserInfo(userInputs);
+    homeViewModel.Name = info.name;
+    homeViewModel.Class = info.class;
+    homeViewModel.Number = info.number;
 
-};
+    if (homeViewModel.Name.length === 0 || homeViewModel.Number.length === 0 || homeViewModel.Class.length === 0) {
+      console.log('请检查姓名 学号 班级是否输入完整');
+    }
+    else {
+      res.render('index', homeViewModel);
+    }
 
-HomeController.prototype.validate = function(homeViewModel) {
-
-  if (homeViewModel.Name.length === 0 || homeViewModel.Number.length === 0 || homeViewModel.Class.length === 0) {
-    console.log('请检查姓名 学号 班级是否输入完整');
-  }
-  else {
-    res.render('index', homeViewModel);
-  }
+  });
 };
 
 module.exports = HomeController;

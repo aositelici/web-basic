@@ -1,11 +1,4 @@
 {
-  "title": [
-    "统一建模语言理论测试"
-  ],
-  "information": {
-    "subject": "考试科目：统一建模语言UML",
-    "time": "时间:100分"
-  },
   "topics": {
     "fill_in_blanks1":{
       "type":"fill_in_blanks",
@@ -87,7 +80,7 @@
         "describe": "(B)需求级",
         "item": "B"
       }, {
-        "describe": "(C)用户目标级、",
+        "describe": "(C)用户目标级",
         "item": "C"
       }, {
         "describe": "(D)子功能级",

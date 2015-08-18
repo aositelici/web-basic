@@ -11,11 +11,9 @@ TopicHelper.prototype.getTopics = function (questions) {
   var topics = [];
   var topicFactory = new TopicFactory();
 
-  for (var type in questions) {
-
-    topics.push(topicFactory.getTopic(questions[type]));
-  }
-
+  questions.forEach(function(question) {
+    topics.push(topicFactory.getTopic(question));
+  })
   return topics;
 };
 
