@@ -41,6 +41,7 @@ PaperDataHelper.prototype.getPaperData = function(callback) {
       formatTopics[topics[i].topicId-1] ={type:topics[i].type, name:topics[i].name, question:topics[i].questions,
       answer:topics[i].answer.split(' '), score:topics[i].score, options:option[topics[i].topicId]};
     }
+
     callback(formatTopics);
   });
 
