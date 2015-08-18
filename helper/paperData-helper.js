@@ -1,5 +1,5 @@
 'use strict';
-
+var data = require('../config/database.json');
 function PaperDataHelper() {
 
 }
@@ -8,9 +8,9 @@ PaperDataHelper.prototype.getPaperData = function(callback) {
 
   var mysql = require('mysql');
   var connection = mysql.createConnection({
-    user     : 'root',
-    password : '123456',
-    database : 'TWWebBasic'
+    user     : data.user,
+    password : data.password,
+    database : data.database
   });
 
   connection.connect(function(err) {

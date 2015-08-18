@@ -2,7 +2,6 @@
 
 var HomeViewModel = require('../view-models/home-view-model');
 var TopicHelper = require('../helper/topic-helper');
-var data = require('../data.json');
 var MarkerHelper = require('../helper/marker-helper');
 var InfoHelper = require('../helper/info-helper');
 var PaperDataHelper = require('../helper/paperData-helper');
