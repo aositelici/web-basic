@@ -7,11 +7,7 @@ function PaperDataHelper() {
 PaperDataHelper.prototype.getPaperData = function(callback) {
 
   var mysql = require('mysql');
-  var connection = mysql.createConnection({
-    user     : data.user,
-    password : data.password,
-    database : data.database
-  });
+  var connection = mysql.createConnection(data);
 
   connection.connect(function(err) {
     if (err) {
